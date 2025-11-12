@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Report Card</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 850px;
+            background-color: #ffffff;
+            border: 1px solid #dee2e6;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-top: 10px solid #008080;
+            border-bottom: 10px solid #008080;
+            padding: 25px 35px;
+        }
+
+        .section-title {
+            background-color: #008080;
+            color: white;
+            padding: 8px 15px;
+            border-top-left-radius: 0 px;
+            border-top-right-radius: 8px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 0px;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+            width: fit-content;
+            margin: 30px auto 15px auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: inherit;
+            font-size: 14px;
+        }
+
+        th, td {
+            border: 1px solid #b0b0b0;
+            padding: 8px;
+            text-align: center;
+        }
+        
+        /* Attendance Table */
+        #attendance-table thead th {
+            background-color: #fce5cd;
+            font-weight: bold;
+            font-size: 11px;
+            padding: 5px;
+        }
+        #attendance-table tbody th {
+            background-color: #008080;
+            color: white;
+            font-weight: normal;
+            text-align: left;
+            padding-left: 10px;
+            width: 15%;
+        }
+        #attendance-table tbody td {
+            height: 25px;
+        }
+
+        /* Two-column Layout */
+        .two-col-layout {
+            display: flex;
+            width: 100%;
+            border: 1px solid #b0b0b0;
+        }
+        .column {
+            width: 50%;
+            padding: 15px;
+        }
+        .column:first-child {
+            border-right: 1px solid #b0b0b0;
+        }
+        .column-header {
+            background-color: #fce5cd;
+            font-weight: bold;
+            text-align: center;
+            padding: 8px;
+            border-bottom: 1px solid #b0b0b0;
+            margin: -15px -15px 15px -15px; /* Extend to edges of the column */
+        }
+
+        /* Personal Details */
+        .personal-details-item {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+
+        /* Remarks */
+        .remarks-item {
+            margin-bottom: 15px;
+        }
+        .remarks-item p {
+            margin: 0 0 5px 0;
+            font-weight: bold;
+        }
+        .dotted-line {
+            display: block;
+            border-bottom: 1px dotted #333;
+            height: 15px;
+            margin-bottom: 10px;
+        }
+        
+        .signatures {
+            border: 2px dashed #ccc;
+            padding: 15px;
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 25px 15px;
+            font-size: 13px;
+        }
+        
+        .signature-line {
+            border-top: 1px dotted #333;
+            padding-top: 5px;
+        }
+
+        .promotion-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+    }
+    
+    .promotion-left {
+        text-align: center;
+    }
+
+    .congratulations {
+        font-family: 'Dancing Script', cursive;
+        color: #2e8b57;
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .promoted-stamp {
+        width: 120px;
+    }
+
+    .promotion-right {
+        width: 65%;
+        font-size: 15px;
+    }
+
+    .promotion-right p {
+        margin-bottom: 25px;
+    }
+
+    .final-signatures {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-top: 30px;
+    }
+    
+    .school-seal {
+        text-align: center;
+    }
+    
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ATTENDANCE SECTION -->
+        <div class="section-title">ATTENDANCE</div>
+        <table id="attendance-table">
+            <thead>
+                <tr>
+                    <th>MONTH</th>
+                    <th>APRIL/MAY</th>
+                    <th>JUNE</th>
+                    <th>JULY</th>
+                    <th>AUG</th>
+                    <th>SEP</th>
+                    <th>OCT</th>
+                    <th>NOV</th>
+                    <th>DEC</th>
+                    <th>JAN</th>
+                    <th>FEB</th>
+                    <th>MAR</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Number of working days</th>
+                    <td></td><td></td><td></td><td></td><td></td><td></td>
+                    <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <th>Number of days attended</th>
+                    <td></td><td></td><td></td><td></td><td></td><td></td>
+                    <td></td><td></td><td></td><td></td><td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- PERSONAL DETAILS SECTION -->
+        <div class="section-title">PERSONAL DETAILS</div>
+        <div class="two-col-layout">
+            <div class="column">
+                <div class="column-header">Sem-1</div>
+                <div class="personal-details-item">
+                    <span>Height _______________</span>
+                    <span>Weight _______________</span>
+                </div>
+            </div>
+            <div class="column">
+                <div class="column-header">Sem-2</div>
+                 <div class="personal-details-item">
+                    <span>Height _______________</span>
+                    <span>Weight _______________</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- REMARKS SECTION -->
+        <div class="section-title">REMARKS</div>
+        <div class="two-col-layout">
+            <div class="column">
+                <div class="column-header">Performance : Sem-1</div>
+                <div class="remarks-item">
+                    <p>Strength(s) of the Student :</p>
+                    <span class="dotted-line"></span>
+                </div>
+                 <div class="remarks-item">
+                    <p>Best Quality / Skill :</p>
+                    <span class="dotted-line"></span>
+                </div>
+                 <div class="remarks-item">
+                    <p>Challenging Areas:</p>
+                    <span class="dotted-line"></span>
+                </div>
+                <div class="signatures">
+                    <div class="signature-line">Signature of the Class teacher</div>
+                    <div class="signature-line">Signature of the Incharge</div>
+                    <div class="signature-line">Signature of the Principal</div>
+                    <div class="signature-line">Signature of the Parent</div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="column-header">Performance : Sem-2</div>
+                <div class="remarks-item">
+                    <p>Strength(s) of the Student :</p>
+                    <span class="dotted-line"></span>
+                </div>
+                 <div class="remarks-item">
+                    <p>Best Quality / Skill :</p>
+                    <span class="dotted-line"></span>
+                </div>
+                 <div class="remarks-item">
+                    <p>Challenging Areas:</p>
+                    <span class="dotted-line"></span>
+                </div>
+                <div class="signatures">
+                    <div class="signature-line">Signature of the Class teacher</div>
+                    <div class="signature-line">Signature of the Incharge</div>
+                    <div class="signature-line">Signature of the Principal</div>
+                    <div class="signature-line">Signature of the Parent</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CONGRATULATIONS SECTION -->
+        <div class="promotion-section">
+            <div class="promotion-left">
+                <div class="congratulations">Congratulations!</div>
+                <img src="Promted.webp" alt="Promoted Stamp" class="promoted-stamp">
+            </div>
+            <div class="promotion-right">
+                <p>You have been promoted to class ......................................</p>
+                <p>New session begins on ...................................................</p>
+                <div class="final-signatures">
+                    <div>
+                        Date : ..............................
+                        <div class="school-seal">(School Seal)</div>
+                    </div>
+                    <div>Signature of the <br><b>Principal</b></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

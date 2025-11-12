@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Development Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background-color: #ffffff;
+            border: 1px solid #dee2e6;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-top: 10px solid #005a5a;
+            border-bottom: 10px solid #f39c12; /* Orange bottom border */
+            padding: 25px;
+        }
+
+        .section-title {
+            background-color: #008080;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: center;
+            width: fit-content;
+            margin: 0 auto 10px auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: inherit;
+            font-size: 14px;
+            margin-bottom: 35px;
+        }
+
+        th, td {
+            border: 1px solid #b0b0b0;
+            padding: 9px;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        /* Logical Development Table Styles */
+        #logical-dev-table .header-main {
+            background-color: #008080;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .sem-header {
+            background-color: #fce5cd; /* Light Orange */
+            font-weight: bold;
+            text-align: center;
+            width: 15%;
+        }
+        
+        .sub-category {
+            text-align: center;
+            font-weight: bold;
+            color: #d35400; /* Orange color for skill titles */
+        }
+        
+        #logical-dev-table td {
+             height: 25px;
+        }
+
+        /* Grading Scale Table Styles */
+        #grading-table {
+            text-align: center;
+            font-size: 13px;
+        }
+        
+        #grading-table .row-header {
+             font-weight: bold;
+             background-color: #f5f5f5;
+             text-align: left;
+             padding-left: 10px;
+        }
+        
+        #grading-table thead th {
+             font-weight: bold;
+             background-color: #f5f5f5;
+        }
+        
+        #grading-table td, #grading-table th {
+            width: 9%;
+        }
+        
+        #grading-table .row-header {
+            width: 19%;
+        }
+        
+        /* Academic Performance Table Styles */
+        #academic-perf-table thead th {
+             font-weight: bold;
+             text-align: center;
+             background-color: #fce5cd; /* Light Orange */
+        }
+        
+        #academic-perf-table .subject-header, #academic-perf-table .cumulative-header {
+            background-color: #008080;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- LOGICAL DEVELOPMENT -->
+        <div class="section-title">LOGICAL DEVELOPMENT</div>
+        <table id="logical-dev-table">
+            <thead>
+                <tr>
+                    <th class="header-main">CRITERIA</th>
+                    <th class="sem-header">Sem-1</th>
+                    <th class="sem-header">Sem-2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td colspan="3" class="sub-category">Recognition of</td></tr>
+                <tr><td>Pre-Math Concepts (shapes, more-less and zero concept)</td><td>00</td><td>00</td></tr>
+                <tr><td>Numbers – Counting, Quantity and Recognition</td><td>00</td><td>00</td></tr>
+                <tr><td>Number Names</td><td>00</td><td>00</td></tr>
+                <tr><td>Oral Recounts</td><td>00</td><td>00</td></tr>
+                <tr><td>Tracing and Writing</td><td>00</td><td>00</td></tr>
+                <tr><td>Writing numbers (Before / Between / After)</td><td>00</td><td>00</td></tr>
+                <tr><td>Comparison of Numbers</td><td>00</td><td>00</td></tr>
+                <tr><td>Addition</td><td>00</td><td>00</td></tr>
+                <tr><td>Subtraction</td><td>00</td><td>00</td></tr>
+            </tbody>
+        </table>
+
+        <!-- SCHOLASTIC AREAS - GRADING -->
+        <div class="section-title">SCHOLASTIC AREAS - (Grading on 9 point scale)</div>
+        <table id="grading-table">
+            <thead>
+                <tr>
+                    <th>GRADE</th>
+                    <th>A1</th>
+                    <th>A2</th>
+                    <th>B1</th>
+                    <th>B2</th>
+                    <th>C1</th>
+                    <th>C2</th>
+                    <th>D1</th>
+                    <th>D2</th>
+                    <th>E</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="row-header">MARKS</td>
+                    <td>91-100</td>
+                    <td>81-90</td>
+                    <td>71-80</td>
+                    <td>61-70</td>
+                    <td>51-60</td>
+                    <td>41-50</td>
+                    <td>31-40</td>
+                    <td>21-30</td>
+                    <td>00-20</td>
+                </tr>
+                <tr>
+                    <td class="row-header">REMARKS</td>
+                    <td>Excellent</td>
+                    <td>Very Good</td>
+                    <td>Good</td>
+                    <td>Fair</td>
+                    <td>Satisfactory</td>
+                    <td>Can do Better</td>
+                    <td>Needs to Improve</td>
+                    <td>........</td>
+                    <td>........</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- ACADEMIC PERFORMANCE -->
+        <div class="section-title">ACADEMIC PERFORMANCE - SCHOLASTIC AREAS</div>
+        <table id="academic-perf-table">
+            <thead>
+                <tr>
+                    <th rowspan="2" class="subject-header">SUBJECTS</th>
+                    <th rowspan="2">SA-1</th>
+                    <th rowspan="2">SA-2</th>
+                    <th class="cumulative-header">CUMULATIVE</th>
+                </tr>
+                <tr>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Literacy Skills</td><td>00</td><td>00</td><td>00</td></tr>
+                <tr><td>Numeracy Skills</td><td>00</td><td>00</td><td>00</td></tr>
+                <tr><td>General Awareness</td><td>00</td><td>00</td><td>00</td></tr>
+                <tr><td>II Language</td><td>00</td><td>00</td><td>00</td></tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Assessment Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background-color: #ffffff;
+            border: 1px solid #dee2e6;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-top: 10px solid #008080;
+            border-bottom: 10px solid #f39c12; /* Orange bottom border */
+            padding: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: inherit;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        th, td {
+            border: 1px solid #b0b0b0;
+            padding: 10px;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        /* Table Header Styles */
+        .table-header th:first-child {
+            background-color: #008080;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            border-top-left-radius: 10px;
+        }
+
+        .sem-header {
+            background-color: #fce5cd; /* Light Orange */
+            font-weight: bold;
+            text-align: center;
+            width: 15%;
+        }
+        
+        .table-header th.sem-header:last-child {
+            border-top-right-radius: 10px;
+        }
+        
+        /* General Awareness Table Cell Style */
+        #general-awareness-table td {
+            height: 35px;
+        }
+
+        /* Linguistic Development Table Styles */
+        .skill-category {
+            font-weight: bold;
+            color: #d35400; /* Orange color for skill titles */
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        /* Empty cells next to skill category titles */
+        .skill-category + td, .skill-category + td + td {
+             background-color: #f9f9f9;
+        }
+        
+        #linguistic-table td {
+            height: 28px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- GENERAL AWARENESS SECTION -->
+        <table id="general-awareness-table">
+            <thead>
+                <tr class="table-header">
+                    <th>GENERAL AWARENESS</th>
+                    <th class="sem-header">Sem-1</th>
+                    <th class="sem-header">Sem-2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Understands the fundamental knowledge of my body, family, school and local community</td><td>00</td><td>00</td></tr>
+                <tr><td>Observes and describes the sensory attributes of various things</td><td>00</td><td>00</td></tr>
+                <tr><td>Identifies and recalls different National leaders, symbols and festivals</td><td>00</td><td>00</td></tr>
+                <tr><td>Recognizes and classifies different modes of transport</td><td>00</td><td>00</td></tr>
+                <tr><td>Understands the general "Time of the day"</td><td>00</td><td>00</td></tr>
+                <tr><td>Recognize and differentiate the plants around us</td><td>00</td><td>00</td></tr>
+                <tr><td>Recognize and differentiate the types of animals around us</td><td>00</td><td>00</td></tr>
+            </tbody>
+        </table>
+
+        <!-- LINGUISTIC DEVELOPMENT SECTION -->
+        <table id="linguistic-table">
+            <thead>
+                <tr class="table-header">
+                    <th>LINGUISTIC DEVELOPMENT</th>
+                    <th class="sem-header">Sem-1</th>
+                    <th class="sem-header">Sem-2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="3" class="skill-category">Listening Skills</td>
+                </tr>
+                <tr><td>Listens with interest</td><td>00</td><td>00</td></tr>
+                <tr><td>Comprehension</td><td>00</td><td>00</td></tr>
+                
+                <tr>
+                    <td colspan="3" class="skill-category">Speaking Skills</td>
+                </tr>
+                <tr><td>Pronunciation</td><td>00</td><td>00</td></tr>
+                <tr><td>Clarity and Fluency</td><td>00</td><td>00</td></tr>
+                <tr><td>Vocabulary</td><td>00</td><td>00</td></tr>
+
+                <tr>
+                    <td colspan="3" class="skill-category">Reading Skills</td>
+                </tr>
+                <tr><td>Phonics</td><td>00</td><td>00</td></tr>
+                <tr><td>Recognition of alphabet and words</td><td>00</td><td>00</td></tr>
+                <tr><td>Reading alphabet / Words / Phrases / Sentences</td><td>00</td><td>00</td></tr>
+
+                <tr>
+                    <td colspan="3" class="skill-category">Writing Skills</td>
+                </tr>
+                <tr><td>Tracing</td><td>00</td><td>00</td></tr>
+                <tr><td>Holding the writing tools with control</td><td>00</td><td>00</td></tr>
+                <tr><td>Writing alphabet / Words / Couplets / Sentences</td><td>000</td><td>00</td></tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</body>
+</html>

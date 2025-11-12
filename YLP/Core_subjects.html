@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Skill Set - Core Subjects</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arial&display=swap');
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .page-container {
+            width: 900px;
+            background-color: #ffffff;
+            border-top: 20px solid #005a9c;
+            border-bottom: 20px solid #f9a825;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .title-bar {
+            background-color: #fce599;
+            color: #333;
+            padding: 10px 25px;
+            font-weight: bold;
+            font-size: 1.1em;
+            border-radius: 15px;
+        }
+        
+        .grading-scale {
+            display: flex;
+            align-items: center;
+            border: 1px solid #999;
+            border-radius: 5px;
+            padding: 2px;
+            font-size: 0.9em;
+        }
+
+        .grading-scale span:first-child {
+            padding: 5px 10px;
+            font-weight: bold;
+        }
+        
+        .grade {
+            width: 22px;
+            height: 22px;
+            line-height: 22px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            margin: 0 2px;
+            font-size: 0.9em;
+        }
+
+        .grade.a { background-color: #4caf50; }
+        .grade.b { background-color: #2196f3; }
+        .grade.c { background-color: #ff9800; }
+        .grade.d { background-color: #f44336; }
+        .grade.e { background-color: #9c27b0; }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .table-container.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .skill-table {
+            width: 100%;
+            border-collapse: inherit;
+            font-size: 0.9em;
+        }
+        
+        .skill-table th, .skill-table td {
+            border: 1px solid #6082B6;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .skill-table th.subject-header {
+            background-color: #003B6F;
+            color: white;
+            font-weight: bold;
+            font-size: 1em;
+        }
+
+        .skill-table th.semester-header {
+            background-color: #fce599;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        .skill-table td.skill-name {
+            background-color: #f7f9fc;
+            text-align: left;
+            padding-left: 10px;
+            font-weight: 500;
+        }
+        
+        .skill-table td.input-cell {
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-container">
+    <div class="header-section">
+        <div class="title-bar">PART-2: Academic Skill set - CORE SUBJECTS</div>
+        <div class="grading-scale">
+            <span>Grading Scale</span>
+            <div class="grade a">A</div>
+            <div class="grade b">B</div>
+            <div class="grade c">C</div>
+            <div class="grade d">D</div>
+            <div class="grade e">E</div>
+        </div>
+    </div>
+    
+    <div class="content-grid">
+        <div class="table-container full-width">
+            <table class="skill-table">
+                <thead>
+                    <tr>
+                        <th class="subject-header" rowspan="2" style="width:15%">Languages</th>
+                        <th class="subject-header" colspan="2">I Lang</th>
+                        <th class="subject-header" colspan="2">II Lang</th>
+                        <th class="subject-header" colspan="2">III Lang</th>
+                    </tr>
+                    <tr>
+                        <th class="semester-header">Sem-1</th>
+                        <th class="semester-header">Sem-2</th>
+                        <th class="semester-header">Sem-1</th>
+                        <th class="semester-header">Sem-2</th>
+                        <th class="semester-header">Sem-1</th>
+                        <th class="semester-header">Sem-2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="skill-name">Listening</td>
+                        <td class="input-cell">00</td><td class="input-cell">00</td><td class="input-cell">00</td><td class="input-cell">00</td><td class="input-cell">00</td><td class="input-cell">00</td>
+                    </tr>
+                    <tr>
+                        <td class="skill-name">Speaking</td>
+                        <td class="input-cell">00</td><td class="input-cell">00</td><td class="input-cell">00</td><td class="input-cell">00</td><td class="input-cell">00</td><td class="input-cell">00</td>
+                    </tr>
+                    <tr>
+                        <td class="skill-name">Reading</td>
+                        <td class="input-cell">00</td><td class="input-cell">00</td><td class="input-cell">00</td><td class="input-cell">00</td><td class="input-cell">00</td><td class="input-cell">00</td>
+                    </tr>
+                     <tr>
+                        <td class="skill-name">Writing Skills</td>
+                        <td class="input-cell">00</td><td class="input-cell">00</td><td class="input-cell">00</td><td class="input-cell">00</td><td class="input-cell">00</td><td class="input-cell">00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-container">
+             <table class="skill-table">
+                <thead>
+                    <tr>
+                        <th class="subject-header" style="width:50%">Mathematics</th>
+                        <th class="semester-header">Sem-1</th>
+                        <th class="semester-header">Sem-2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="skill-name">Problem Solving</td><td class="input-cell">00</td><td class="input-cell">00</td></tr>
+                    <tr><td class="skill-name">Reasoning</td><td class="input-cell">00</td><td class="input-cell">00</td></tr>
+                    <tr><td class="skill-name">Analytical Thinking</td><td class="input-cell">00</td><td class="input-cell">00</td></tr>
+                    <tr><td class="skill-name">Logical Thinking</td><td class="input-cell">00</td><td class="input-cell">00</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="table-container">
+             <table class="skill-table">
+                <thead>
+                    <tr>
+                        <th class="subject-header" style="width:50%">Science / EVS</th>
+                        <th class="semester-header">Sem-1</th>
+                        <th class="semester-header">Sem-2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="skill-name">Observation Skills</td><td class="input-cell">00</td><td class="input-cell">00</td></tr>
+                    <tr><td class="skill-name">Experimenting</td><td class="input-cell">00</td><td class="input-cell">00</td></tr>
+                    <tr><td class="skill-name">Drawing skills</td><td class="input-cell">00</td><td class="input-cell">00</td></tr>
+                    <tr><td class="skill-name">Predicting</td><td class="input-cell">00</td><td class="input-cell">00</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-container">
+             <table class="skill-table">
+                <thead>
+                    <tr>
+                        <th class="subject-header" style="width:50%">Social Studies</th>
+                        <th class="semester-header">Sem-1</th>
+                        <th class="semester-header">Sem-2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="skill-name">Observation Skills</td><td class="input-cell">00</td><td class="input-cell">00</td></tr>
+                    <tr><td class="skill-name">Interpersonal Skills</td><td class="input-cell">00</td><td class="input-cell">00</td></tr>
+                    <tr><td class="skill-name">Interpreting Charts & Graphs</td><td class="input-cell">00</td><td class="input-cell">00</td></tr>
+                    <tr><td class="skill-name">Drawing Skills</td><td class="input-cell">00</td><td class="input-cell">00</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-container">
+             <table class="skill-table">
+                <thead>
+                    <tr>
+                        <th class="subject-header" style="width:50%">ICT</th>
+                        <th class="semester-header">Sem-1</th>
+                        <th class="semester-header">Sem-2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="skill-name">Operating Skills</td><td class="input-cell">00</td><td class="input-cell">00</td></tr>
+                    <tr><td class="skill-name">Processing Information</td><td class="input-cell">00</td><td class="input-cell">00</td></tr>
+                    <tr><td class="skill-name">Application Skills (Theory into practice)</td><td class="input-cell">00</td><td class="input-cell">00</td></tr>
+                    <tr><td class="skill-name">Usage of World Wide Web (Internet)</td><td class="input-cell">00</td><td class="input-cell">00</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-container">
+             <table class="skill-table">
+                <thead>
+                    <tr>
+                        <th class="subject-header" style="width:50%">Abacus</th>
+                        <th class="semester-header">Sem-1</th>
+                        <th class="semester-header">Sem-2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="skill-name">Concentration</td><td class="input-cell">00</td><td class="input-cell">00</td></tr>
+                    <tr><td class="skill-name">Speed and Accuracy</td><td class="input-cell">00</td><td class="input-cell">00</td></tr>
+                    <tr><td class="skill-name">Visualization</td><td class="input-cell">00</td><td class="input-cell">00</td></tr>
+                    <tr><td class="skill-name">Memory</td><td class="input-cell">00</td><td class="input-cell">00</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-container">
+             <table class="skill-table">
+                <thead>
+                    <tr>
+                        <th class="subject-header" style="width:50%">Life Skills/Soft Skills</th>
+                        <th class="semester-header">Sem-1</th>
+                        <th class="semester-header">Sem-2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="skill-name">Interpersonal Skills</td><td class="input-cell">00</td><td class="input-cell">00</td></tr>
+                    <tr><td class="skill-name">Problem Solving</td><td class="input-cell">00</td><td class="input-cell">00</td></tr>
+                    <tr><td class="skill-name">Creative Thinking</td><td class="input-cell">00</td><td class="input-cell">00</td></tr>
+                    <tr><td class="skill-name">Self Awareness</td><td class="input-cell">00</td><td class="input-cell">00</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

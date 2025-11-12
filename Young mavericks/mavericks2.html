@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sri Chaitanya's - 21st Century Skills</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #eaf4ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 900px;
+        background-color: #ffffff;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        border: 1px solid #ddd;
+    }
+
+    .header-curve, .footer-curve {
+        background: linear-gradient(to bottom, #d6e8ff, #ffffff);
+        height: 80px;
+        border-bottom: 2px solid #b9d7f7;
+        position: relative;
+    }
+
+    .footer-curve {
+        background: linear-gradient(to top, #d6e8ff, #ffffff);
+        border-bottom: none;
+        border-top: 2px solid #b9d7f7;
+        height: 60px;
+    }
+
+    .school-name {
+        position: absolute;
+        top: 50%;
+        right: 25px;
+        transform: translateY(-50%);
+        font-size: 26px;
+        font-weight: bold;
+        color: #1a0dab;
+    }
+
+    .main-content {
+        padding: 20px 25px;
+    }
+
+    .main-title {
+        background-color: #e4eef9;
+        color: #333;
+        font-size: 24px;
+        font-weight: bold;
+        padding: 8px 25px;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 0px;
+        display: inline-block;
+        margin-bottom: 20px;
+        border: 1px solid #c9dff7;
+    }
+
+    .grading-scale {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+        margin-bottom: 25px;
+        flex-wrap: wrap;
+    }
+
+    .grading-scale .label {
+        font-weight: bold;
+        background-color: #e0eafc;
+        padding: 8px 12px;
+        border-radius: 5px 0 0 5px;
+        border: 1px solid #ccc;
+        border-right: none;
+    }
+
+    .grading-scale .item {
+        display: flex;
+        align-items: center;
+        border: 1px solid #ccc;
+        border-left: none;
+    }
+     .grading-scale .item:first-of-type {
+        border-left: 1px solid #ccc;
+     }
+
+    .grading-scale .grade {
+        padding: 8px 12px;
+        font-weight: bold;
+        border-right: 1px solid #ccc;
+    }
+    
+    .grading-scale .desc {
+        padding: 8px 12px;
+        background-color: #fff;
+    }
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .skill-section {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .section-title {
+        background: linear-gradient(to right, #e0eafc, #f0f8ff);
+        padding: 8px 12px;
+        font-weight: bold;
+        color: #333;
+        border-bottom: 1px solid #ddd;
+    }
+    .section-title span {
+        font-style: italic;
+        color: #666;
+        margin-right: 5px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: inherit;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+        font-size: 14px;
+        height: 32px; /* Fixed height for rows */
+    }
+
+    td:nth-child(2), td:nth-child(3) {
+        width: 50px;
+    }
+
+    .semester-header {
+        text-align: center;
+        font-weight: normal;
+    }
+    
+    .sem-label {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 12px;
+        font-size: 12px;
+        color: #333;
+    }
+
+    .sem1 { background-color: #fce4e4; }
+    .sem2 { background-color: #fff9c4; }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .skills-grid {
+            grid-template-columns: 1fr;
+        }
+        .grading-scale {
+            justify-content: flex-start;
+            gap: 5px;
+        }
+        .grading-scale .item, .grading-scale .label {
+            margin-bottom: 5px;
+        }
+    }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-curve">
+        <div class="school-name">Sri Chaitanya's</div>
+    </div>
+
+    <div class="main-content">
+        <div class="main-title">21st Century Skills</div>
+
+        <div class="grading-scale">
+            <table class="grading-scale-table" style="margin-top: 20px;">
+                <thead>
+                    <tr>
+                        <th class="grade  grade-a">A</th>
+                        <th class="grade  grade-b">B</th>
+                        <th class="grade  grade-c">C</th>
+                        <th class="grade  grade-d">D</th>
+                        <th class="grade  grade-e">E</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="desc">Outstanding</td>
+                        <td class="desc">Excellent</td>
+                        <td class="desc">Good</td>
+                        <td class="desc">Satisfactory</td>
+                        <td class="desc">Needs Improvement</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="skills-grid">
+            <!-- Thinking Skills -->
+            <div class="skill-section">
+                <div class="section-title"><span>///</span> Thinking Skills</div>
+                <table>
+                    <thead><tr><th>Skills</th><th class="semester-header"><span class="sem-label sem1">Sem I</span></th><th class="semester-header"><span class="sem-label sem2">Sem II</span></th></tr></thead>
+                    <tbody>
+                        <tr><td>Creative thinking</td><td></td><td></td></tr>
+                        <tr><td>Problem solving</td><td></td><td></td></tr>
+                        <tr><td>Decision making</td><td></td><td></td></tr>
+                        <tr><td>Critical thinking</td><td></td><td></td></tr>
+                        <tr><td>Reasoning</td><td></td><td></td></tr>
+                        <tr><td>Analysis</td><td></td><td></td></tr>
+                        <tr><td>Conceptualize</td><td></td><td></td></tr>
+                        <tr><td>Evaluate</td><td></td><td></td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Working Skills -->
+            <div class="skill-section">
+                <div class="section-title"><span>///</span> Working Skills</div>
+                <table>
+                     <thead><tr><th>Skills</th><th class="semester-header"><span class="sem-label sem1">Sem I</span></th><th class="semester-header"><span class="sem-label sem2">Sem II</span></th></tr></thead>
+                     <tbody>
+                        <tr><td>Organized with work</td><td></td><td></td></tr>
+                        <tr><td>Collaborates with others</td><td></td><td></td></tr>
+                        <tr><td>Works with material appropriately</td><td></td><td></td></tr>
+                        <tr><td>Accepts changes in classroom routines</td><td></td><td></td></tr>
+                        <tr><td>Stays engrossed in self-selected work</td><td></td><td></td></tr>
+                        <tr><td>Puts away material/toy - post work</td><td></td><td></td></tr>
+                        <tr><td>Demonstrates good manners</td><td></td><td></td></tr>
+                        <tr><td>Works independently</td><td></td><td></td></tr>
+                        <tr><td>Initiates or joins to work/play with other children</td><td></td><td></td></tr>
+                        <tr><td>Assessment of process</td><td></td><td></td></tr>
+                        <tr><td>Assessment of product</td><td></td><td></td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Life Skills 1 -->
+            <div class="skill-section">
+                <div class="section-title"><span>///</span> Life Skills</div>
+                <table>
+                     <thead><tr><th>Skills</th><th class="semester-header"><span class="sem-label sem1">Sem I</span></th><th class="semester-header"><span class="sem-label sem2">Sem II</span></th></tr></thead>
+                     <tbody>
+                        <tr><td>Participates in group activities</td><td></td><td></td></tr>
+                        <tr><td>Relationship with peers</td><td></td><td></td></tr>
+                        <tr><td>Shows concern for others</td><td></td><td></td></tr>
+                        <tr><td>Confident in group</td><td></td><td></td></tr>
+                        <tr><td>Self-disciplined</td><td></td><td></td></tr>
+                        <tr><td>Emotionally expressive</td><td></td><td></td></tr>
+                        <tr><td>Shares willingly</td><td></td><td></td></tr>
+                        <tr><td>Waits for his/her turn</td><td></td><td></td></tr>
+                        <tr><td>Listens while others speak</td><td></td><td></td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Life Skills 2 -->
+            <div class="skill-section">
+                 <div class="section-title"><span>&nbsp;</span></div> <!-- Empty title for alignment -->
+                <table>
+                     <thead><tr><th>Skills</th><th class="semester-header"><span class="sem-label sem1">Sem I</span></th><th class="semester-header"><span class="sem-label sem2">Sem II</span></th></tr></thead>
+                     <tbody>
+                        <tr><td>Shows awareness and concern for others feelings</td><td></td><td></td></tr>
+                        <tr><td>Understands classroom guidelines</td><td></td><td></td></tr>
+                        <tr><td>Empathizes for others problems</td><td></td><td></td></tr>
+                        <tr><td>Adapts to changes</td><td></td><td></td></tr>
+                        <tr><td>Responds to feedback</td><td></td><td></td></tr>
+                        <tr><td>Pro-actively offers help to others</td><td></td><td></td></tr>
+                        <tr><td>Understands and overcomes limitations</td><td></td><td></td></tr>
+                        <tr><td style="border:none; background-color:white;"></td><td style="border:none; background-color:white;"></td><td style="border:none; background-color:white;"></td></tr>
+                        <tr><td style="border:none; background-color:white;"></td><td style="border:none; background-color:white;"></td><td style="border:none; background-color:white;"></td></tr>
+                     </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-curve"></div>
+</div>
+
+</body>
+</html>

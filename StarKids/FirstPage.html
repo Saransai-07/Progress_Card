@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievement Record</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 800px;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            padding-bottom : 8px;
+        }
+
+        .header {
+            /* The header now just contains the image, so no extra styling is needed. */
+            line-height: 0; /* Removes any extra space below the image */
+        }
+
+        .header img {
+            width: 100%;
+            display: block; /* Ensures the image behaves as a block element */
+        }
+
+        .form-section {
+            padding: 40px;
+            padding-top: 50px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        
+        .form-overlay {
+            background-color: rgba(255, 255, 255, 0.85);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        
+        .form-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            color: #333;
+            margin-right: 15px;
+            min-width: 150px;
+            font-size: 1.1rem;
+        }
+
+        .form-group input[type="text"],
+        .form-group .dotted-input {
+            border: none;
+            border-bottom: 2px dotted #aaa;
+            flex-grow: 1;
+            font-size: 1.1rem;
+            padding: 5px;
+            background: transparent;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-bottom-color: #32c6c1;
+        }
+        
+        .form-group.inline-group {
+            justify-content: space-between;
+        }
+        
+        .inline-item {
+            display: flex;
+            align-items: center;
+            width: 48%;
+        }
+
+        .box-input {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            padding: 10px;
+            font-size: 1.1rem;
+        }
+
+        textarea.box-input {
+            height: 80px;
+            resize: vertical;
+        }
+
+        .char-inputs {
+            display: flex;
+            gap: 8px;
+        }
+
+        .char-inputs input {
+            width: 35px;
+            height: 35px;
+            text-align: center;
+            font-size: 1.2rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 0;
+        }
+        
+        .footer {
+            position: relative;
+            height: 120px;
+            background: transparent;
+        }
+
+        .footer-shape {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f3b600;
+            clip-path: polygon(0 30%, 100% 0, 100% 100%, 0% 100%);
+        }
+        
+        .footer-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 20px 40px;
+            height: 100%;
+        }
+
+        .website-link {
+            background-color: white;
+            color: #555;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .varsity-logo {
+            background-color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .varsity-logo::after {
+             content: '';
+             position: absolute;
+             bottom: -10px;
+             left: 20px;
+             width: 0;
+             height: 0;
+             border-left: 10px solid transparent;
+             border-right: 10px solid transparent;
+             border-top: 10px solid white;
+        }
+
+        .varsity-logo img {
+            height: 40px;
+            margin-bottom: 8px;
+        }
+        
+        .footer-bar {
+            background-color: #32c6c1;
+            height: 15px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            margin :8px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <img src="starKids.png" alt="Achievement Record Header">
+        </header>
+
+        <main class="form-section">
+            <div class="form-overlay"></div>
+            <div class="form-content">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" value="Ravi sir.com" id="name" name="name" class="dotted-input">
+                    </div>
+                    <div class="form-group inline-group">
+                       <div class="inline-item">
+                         <label for="class">Class</label>
+                         <input type="text"  value="0" id="class" name="class" class="dotted-input">
+                       </div>
+                       <div class="inline-item">
+                         <label for="section" style="min-width: 80px;">Section</label>
+                         <input type="text" value="A" id="section" name="section" class="dotted-input">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="admission-no">Admission No</label>
+                        <input type="text" value="SCS000000" id="admission-no" name="admission-no" class="box-input">
+                    </div>
+                    <div class="form-group">
+                        <label>Date of Birth</label>
+                        <div class="char-inputs">
+                            <input type="text" maxlength="1" placeholder="D" value="0">
+                            <input type="text" maxlength="1" placeholder="D" value="0">
+                            <input type="text" maxlength="1" placeholder="M" value="0">
+                            <input type="text" maxlength="1" placeholder="M" value="0">
+                            <input type="text" maxlength="1" placeholder="Y" value="0">
+                            <input type="text" maxlength="1" placeholder="Y" value="0">
+                            <input type="text" maxlength="1" placeholder="Y" value="0">
+                            <input type="text" maxlength="1" placeholder="Y" value="0">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Residential<br>Address</label>
+                        <textarea id="address" name="address" class="box-input"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Contact</label>
+                         <div class="char-inputs">
+                            <input type="text" maxlength="1" value="0">
+                            <input type="text" maxlength="1" value="0">
+                            <input type="text" maxlength="1" value="0">
+                            <input type="text" maxlength="1" value="0">
+                            <input type="text" maxlength="1" value="0">
+                            <input type="text" maxlength="1" value="0">
+                            <input type="text" maxlength="1" value="0">
+                            <input type="text" maxlength="1" value="0">
+                            <input type="text" maxlength="1" value="0">
+                            <input type="text" maxlength="1" value="0">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <div class="footer-shape"></div>
+            <div class="footer-content">
+                 <a href="http://www.srichaitanyaschool.net" target="_blank" class="website-link">www.srichaitanyaschool.net</a>
+                 <div class="varsity-logo">
+                     <img src="varsity_logo.jpeg  " alt="Varsity Logo">
+                 </div>
+            </div>
+             <div class="footer-bar"></div>
+        </footer>
+
+    </div>
+
+</body>
+</html>

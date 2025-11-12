@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Co-Scholastic Areas Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background-color: #ffffff;
+            border: 1px solid #dee2e6;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-top: 10px solid #008080;
+            border-bottom: 10px solid #008080;
+            padding: 20px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* margin-bottom: 15px; */
+        }
+
+        .section-title {
+            background-color: #008080;
+            color: white;
+            padding: 8px 15px;
+            border-top-left-radius: 0 px;
+            border-top-right-radius: 8px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 0px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .grading-scale {
+            border: 1px solid #333;
+            border-radius: 20px;
+            padding: 5px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+
+        .grading-scale span {
+            padding: 0 8px;
+        }
+
+        .grading-scale b {
+            background-color: #008080;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            text-align: center;
+            line-height: 20px;
+            margin: 0 3px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: inherit;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+
+        th, td {
+            border: 1px solid #b0b0b0;
+            padding: 10px;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        thead th {
+            font-weight: bold;
+            text-align: center;
+            background-color: #f0c08c; /* Light Orange */
+        }
+
+        /* Co-Scholastic Table Styles */
+        #co-scholastic-table .event-header {
+            background-color: #008080;
+            color: white;
+        }
+        
+        #co-scholastic-table .cumulative-header {
+            background-color: #005a5a;
+            color: white;
+        }
+
+        /* Competition Criteria Table Styles */
+        #criteria-table {
+            text-align: center;
+        }
+
+        #criteria-table .criteria-col {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            width: 20%;
+        }
+
+        #criteria-table .grade-header {
+            background-color: #fce5cd; /* Light Orange */
+        }
+        
+        #criteria-table td {
+            text-align: left;
+            vertical-align: top;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+
+        .note {
+            background-color: #fffde7; /* Light Yellow */
+            padding: 10px;
+            border-left: 4px solid #fbc02d;
+            font-size: 13px;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- CO-SCHOLASTIC AREAS SECTION -->
+        <div class="section-header">
+            <div class="section-title">CO-SCHOLASTIC AREAS</div>
+            <div class="grading-scale">
+                <span>Grading Scale -</span><b>A</b><b>B</b><b>C</b><b>D</b>
+            </div>
+        </div>
+        <table id="co-scholastic-table">
+            <thead>
+                <tr>
+                    <th class="event-header">EVENTS</th>
+                    <th>SA-1</th>
+                    <th>SA-2</th>
+                    <th class="cumulative-header">CUMULATIVE</th>
+                </tr>
+                 <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Celebrations</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Projects</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Competitions</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Field Trips</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- COMPETITIONS SECTION -->
+        <div class="section-header">
+            <div class="section-title">COMPETITIONS</div>
+            <div class="grading-scale">
+                <span>Grading Scale -</span><b>A</b><b>B</b><b>C</b><b>D</b>
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Competition Title</th>
+                    <th>Proficiency</th>
+                    <th>Competitive Spirit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>&nbsp;</td><td></td><td></td></tr>
+                <tr><td>&nbsp;</td><td></td><td></td></tr>
+                <tr><td>&nbsp;</td><td></td><td></td></tr>
+                <tr><td>&nbsp;</td><td></td><td></td></tr>
+                <tr><td>&nbsp;</td><td></td><td></td></tr>
+                <tr><td>&nbsp;</td><td></td><td></td></tr>
+            </tbody>
+        </table>
+
+        <!-- COMPETITION CRITERIA SECTION -->
+        <div class="section-header">
+             <div class="section-title">COMPETITION CRITERIA</div>
+        </div>
+        <table id="criteria-table">
+            <thead>
+                <tr>
+                    <th>Competitioin Criteria</th>
+                    <th class="grade-header">A</th>
+                    <th class="grade-header">B</th>
+                    <th class="grade-header">C</th>
+                    <th class="grade-header">D</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="criteria-col">Proficiency</td>
+                    <td>Displays the highest level of expertise and perfection</td>
+                    <td>Meets expected outcome and displays required skills</td>
+                    <td>Participates and accomplishes; needs practice to excel</td>
+                    <td>Scope for improvement through practice and guidance</td>
+                </tr>
+                <tr>
+                    <td class="criteria-col">Competitive Spirit</td>
+                    <td>Competes with a true spirit of learning and joy, and consistently participates with fairness and enthusiasm.</td>
+                    <td>Participates with interest and generally follows guidelines with consistency.</td>
+                    <td>Participates with interest; needs to work on consistent spirit</td>
+                    <td>Can perform and learn better with greater sportsman spirit</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="note">
+            <strong>Note:</strong> Students who achieve 'A' grade in the Proficiency parameter will receive a Proficiency Certificate and a Participation Certificate will be given to the students with good competitive spirit.
+        </div>
+
+    </div>
+
+</body>
+</html>

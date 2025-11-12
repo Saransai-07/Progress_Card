@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sri Chaitanya's - Scholastic Areas</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #fff8ea;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+        color: #333;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 950px;
+        background-color: #ffffff;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        border: 1px solid #ddd;
+    }
+
+    .header-curve, .footer-curve {
+        background: linear-gradient(to bottom, #ffe6d6, #ffffff);
+        height: 70px;
+        border-bottom: 2px solid #f7deb9;
+        position: relative;
+    }
+
+    .footer-curve {
+        background: linear-gradient(to top, #ffe6d6, #ffffff);
+        border-bottom: none;
+        border-top: 2px solid #f7deb9;
+        height: 60px;
+        position: relative;
+    }
+    .footer-watermark {
+        position: absolute;
+        bottom: 10px;
+        right: 15px;
+        color: #aaa;
+        font-size: 14px;
+    }
+
+
+    .school-name {
+        position: absolute;
+        top: 50%;
+        right: 25px;
+        transform: translateY(-50%);
+        font-size: 26px;
+        font-weight: bold;
+        color: #1a0dab;
+    }
+
+    .main-content {
+        padding: 20px 25px;
+    }
+
+    .main-title {
+        background-color: #f9efe4;
+        color: #333;
+        font-size: 24px;
+        font-weight: bold;
+        padding: 8px 25px;
+        border-radius: 20px;
+        display: inline-block;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 0px;
+        border: 1px solid #c9dff7;
+    }
+
+    .section-title {
+        color: #d9534f;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .subtitle {
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+        color: #d9534f;
+        margin: -5px 0 15px 0;
+        text-align: end;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: inherit;
+        font-size: 12px;
+    }
+    
+    th, td {
+        border: 1px solid #b0b0b0;
+        padding: 5px;
+        text-align: center;
+    }
+
+    /* 9-Point Grading Scale */
+    .grading-table-9pt th, .grading-table-9pt td {
+        padding: 4px;
+        font-size: 11px;
+    }
+    .grading-table-9pt .header-row { background-color: #eef; }
+    .grading-table-9pt .header-row th { font-weight: normal; }
+    .grading-table-9pt .label-col { text-align: left; font-weight: bold; background-color: #f7f7f7; }
+
+    /* Performance Table Part 1 */
+    .performance-table { margin-top: 10px; }
+    .performance-table thead th {
+        font-weight: bold;
+        background-color: #f2f2f2;
+    }
+    .performance-table tbody td:first-child { text-align: left; }
+    
+    .sem-header-container { display: flex; justify-content: center; margin-bottom: 5px; }
+    .sem-header-label {
+        padding: 5px 20px;
+        border-radius: 15px;
+        font-weight: bold;
+        font-size: 14px;
+        margin: 0 40px;
+    }
+    .sem1-bg { background-color: #fce4e4; }
+    .sem2-bg { background-color: #e0f7fa; }
+
+    /* 5-Point Grading Scale Part 2 */
+    .grading-scale-5pt { margin: 15px auto; width: 80%; border: 1px solid #ccc; }
+    .grading-scale-5pt td { border: 1px solid #ccc; }
+    .grading-scale-5pt .label { font-weight: bold; background-color: #e0eafc; }
+    .grading-scale-5pt .grade { font-weight: bold; }
+
+    /* Academic Skill Set Part 2 */
+    .skill-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        margin-top: 15px;
+    }
+    .skill-block { border: 1px solid #ccc; }
+    .skill-block .title {
+        font-weight: bold;
+        padding: 5px;
+        background: linear-gradient(to right, #e0eafc, #f0f8ff);
+        border-bottom: 1px solid #ccc;
+    }
+    .skill-block .title span { font-style: italic; color: #666; margin-right: 5px; }
+    .skill-block table th { background-color: #fff9c4; font-size: 11px; padding: 3px; }
+    .skill-block table td:first-child { text-align: left; font-size: 11px; }
+
+    @media (max-width: 800px) {
+        .skill-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+        .skill-grid { grid-template-columns: 1fr; }
+        .performance-table, .grading-table-9pt { font-size: 10px; }
+        .sem-header-label { margin: 0 10px; font-size: 12px; }
+    }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-curve">
+        <div class="school-name">Sri Chaitanya's</div>
+    </div>
+
+    <div class="main-content">
+        <div style="text-align: start;">
+            <div class="main-title">Scholastic Areas</div>
+        </div>
+        <p class="subtitle">(Grading on 9 point scale)</p>
+
+        <table class="grading-table-9pt">
+            <tbody>
+                <tr class="header-row">
+                    <th class="label-col">Grade</th>
+                    <th>A1</th><th>A2</th><th>B1</th><th>B2</th><th>C1</th><th>C2</th><th>D</th><th>E1</th><th>E2</th>
+                </tr>
+                <tr>
+                    <td class="label-col">Marks</td>
+                    <td>91 - 100</td><td>81 - 90</td><td>71 - 80</td><td>61 - 70</td><td>51 - 60</td><td>41 - 50</td><td>31 - 40</td><td>21 - 30</td><td>00 - 20</td>
+                </tr>
+                <tr>
+                    <td class="label-col">Remark</td>
+                    <td>Excellent</td><td>Very Good</td><td>Good</td><td>Fair</td><td>Satisfactory</td><td>Can do Better</td><td>Needs to Improve</td><td>......</td><td>......</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="section-title">Academic Performance - Scholastic Areas Part 1</div>
+        <div class="sem-header-container">
+            <span class="sem-header-label sem1-bg">Sem I</span>
+            <span class="sem-header-label sem2-bg">Sem II</span>
+        </div>
+        <table class="performance-table">
+            <thead>
+                <tr>
+                    <th rowspan="2" style="width: 25%;">/// Subjects</th>
+                    <th colspan="3">Sem I</th>
+                    <th colspan="3">Sem II</th>
+                    <th rowspan="2">CGPA</th>
+                </tr>
+                <tr>
+                    <th>FA I</th><th>SA I</th><th>SGPA</th>
+                    <th>FA II</th><th>SA II</th><th>SGPA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>English Language Arts & Skills</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td></tr>
+                <tr><td>II Lang</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td></tr>
+                <tr><td>III Lang</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td></tr>
+                <tr><td>Math Encyclopedia</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td></tr>
+                <tr><td>Science Encyclopedia</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td></tr>
+                <tr><td>Social Encyclopedia</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td></tr>
+                <tr><td>General Encyclopedia</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td></tr>
+                <tr><td>ICT</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td></tr>
+                <tr><td>Abacus</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td></tr>
+                <tr><td>STEAM/Robotics</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td></tr>
+            </tbody>
+        </table>
+
+        <div class="section-title">Academic Skill Set - Scholastic Areas Part 2</div>
+        <table class="grading-scale-5pt">
+             <tr>
+                <td class="label" rowspan="2">Grading Scale</td>
+                <td class="grade">A</td><td class="grade">B</td><td class="grade">C</td><td class="grade">D</td><td class="grade">E</td>
+             </tr>
+             <tr>
+                <td>Outstanding</td><td>Excellent</td><td>Good</td><td>Satisfactory</td><td>Needs Improvement</td>
+             </tr>
+        </table>
+
+        <div class="skill-grid">
+            <!-- English -->
+            <div class="skill-block">
+                <div class="title"><span>///</span> English Language Arts & Skills</div>
+                <table>
+                    <thead><tr><th colspan="2">Sem I</th><th colspan="2">Sem II</th></tr><tr><th>FA I</th><th>SA I</th><th>FA II</th><th>SA II</th></tr></thead>
+                    <tbody>
+                        <tr><td>Listening</td><td>00</td><td>00</td><td>00</td></tr>
+                        <tr><td>Speaking</td><td>00</td><td>00</td><td>00</td></tr>
+                        <tr><td>Reading</td><td>00</td><td>00</td><td>00</td></tr>
+                        <tr><td>Writing</td><td>00</td><td>00</td><td>00</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Language 2 -->
+             <div class="skill-block">
+                <div class="title"><span>///</span> Language - 2</div>
+                <table>
+                    <thead><tr><th colspan="2">Sem I</th><th colspan="2">Sem II</th></tr><tr><th>FA I</th><th>SA I</th><th>FA II</th><th>SA II</th></tr></thead>
+                    <tbody>
+                        <tr><td>Listening</td><td>00</td><td>00</td><td>00</td></tr>
+                        <tr><td>Speaking</td><td>00</td><td>00</td><td>00</td></tr>
+                        <tr><td>Reading</td><td>00</td><td>00</td><td>00</td></tr>
+                        <tr><td>Writing</td><td>00</td><td>00</td><td>00</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Language 3 -->
+             <div class="skill-block">
+                <div class="title"><span>///</span> Language - 3</div>
+                <table>
+                    <thead><tr><th colspan="2">Sem I</th><th colspan="2">Sem II</th></tr><tr><th>FA I</th><th>SA I</th><th>FA II</th><th>SA II</th></tr></thead>
+                    <tbody>
+                        <tr><td>Listening</td><td>00</td><td>00</td><td>00</td></tr>
+                        <tr><td>Speaking</td><td>00</td><td>00</td><td>00</td></tr>
+                        <tr><td>Reading</td><td>00</td><td>00</td><td>00</td></tr>
+                        <tr><td>Writing</td><td>00</td><td>00</td><td>00</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Math -->
+             <div class="skill-block">
+                <div class="title"><span>///</span> Math Encyclopedia</div>
+                <table>
+                    <thead><tr><th colspan="2">Sem I</th><th colspan="2">Sem II</th></tr><tr><th>FA I</th><th>SA I</th><th>FA II</th><th>SA II</th></tr></thead>
+                    <tbody>
+                        <tr><td>Problem solving</td><td>00</td><td>00</td><td>00</td></tr>
+                        <tr><td>Reasoning</td><td>00</td><td>00</td><td>00</td></tr>
+                        <tr><td>Analytical thinking</td><td>00</td><td>00</td><td>00</td></tr>
+                        <tr><td>Logical thinking</td><td>00</td><td>00</td><td>00</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Science -->
+             <div class="skill-block">
+                <div class="title"><span>///</span> Science Encyclopedia</div>
+                <table>
+                    <thead><tr><th colspan="2">Sem I</th><th colspan="2">Sem II</th></tr><tr><th>FA I</th><th>SA I</th><th>FA II</th><th>SA II</th></tr></thead>
+                    <tbody>
+                        <tr><td>Observation & predicting</td><td>00</td><td>00</td><td>00</td></tr>
+                        <tr><td>Experimenting</td><td>00</td><td>00</td><td>00</td></tr>
+                        <tr><td>Drawing</td><td>00</td><td>00</td><td>00</td></tr>
+                        <tr><td>Finding scientific evidences</td><td>00</td><td>00</td><td>00</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Social -->
+             <div class="skill-block">
+                <div class="title"><span>///</span> Social Encyclopedia</div>
+                <table>
+                    <thead><tr><th colspan="2">Sem I</th><th colspan="2">Sem II</th></tr><tr><th>FA I</th><th>SA I</th><th>FA II</th><th>SA II</th></tr></thead>
+                    <tbody>
+                        <tr><td>Observation skills</td><td>00</td><td>00</td><td>00</td></tr>
+                        <tr><td>Interpersonal skills</td><td>00</td><td>00</td><td>00</td></tr>
+                        <tr><td>Interpreting charts &graphs</td><td>00</td><td>00</td><td>00</td></tr>
+                        <tr><td>Drawing skills</td><td>00</td><td>00</td><td>00</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="footer-curve">
+    </div>
+</div>
+
+</body>
+</html>

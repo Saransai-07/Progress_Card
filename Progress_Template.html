@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Competition Evaluation Sheet</title>
+  <style>
+    @page {
+      size: A4;
+      /* margin: 20mm; */
+    }
+
+    body {
+      font-family: "Arial", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+    }
+
+    .page-container {
+      width: 210mm;
+      height: 100vh;
+      background: #fff;
+      border: 1px solid #ccc;
+      margin: auto;
+      box-sizing: border-box;
+      padding: 15mm;
+      position: relative;
+    }
+
+    .page-container h3{
+      background-color: #f4de87;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    /* Header Bar */
+    .header-bar {
+      position: relative;
+      background-color: #145a8b;
+      height: 12px;
+      width: 100%;
+      border-top: 8px solid #f4de87;
+      margin-bottom: 10px;
+    }
+
+    /* Table styling */
+    table {
+      border-collapse:initial;
+      width: 100%;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    th, td {
+      
+      border: 1px solid #3a5b9c;
+      padding: 10px 12px;
+    }
+
+    /* Title row */
+    .title-row th {
+      background-color: #f4de87;
+      font-weight: bold;
+      color: #333;
+      font-size: 14px;
+      text-align: left;
+      padding-left: 8px;
+    }
+
+    .sub-header {
+      background-color: #173e6e;
+      color: #fff;
+      font-weight: bold;
+      text-align: center;
+      padding-left: 8px;
+    }
+
+    .grading-scale {
+      text-align: right;
+      font-size: 13px;
+      font-weight: bold;
+      background-color: #ffffff;
+      border: none;
+    }
+
+    .grading-scale span {
+      display: inline-block;
+      margin-left: 5px;
+      padding: 3px 8px;
+      border: 1px solid #3a5b9c;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .grade-A { color: #009245; }
+    .grade-B { color: #f15a24; }
+    .grade-C { color: #662d91; }
+    .grade-D { color: #0071bc; }
+
+    /* Competition Table Body */
+    .competition-table th {
+      background-color: #f7e9b5;
+    }
+
+    .competition-table td {
+      height: 28px;
+    }
+
+    /* Criteria Table */
+    .criteria-header {
+      background-color: #2c5177 !important;
+      color: white !important;
+      font-weight: bold;
+      text-align: left;
+      padding-left: 8px;
+    }
+
+    .criteria-table th {
+      background-color: #f4de87;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .criteria-table td {
+      background-color: #ffffff;
+      text-align: left;
+      font-size: 12.5px;
+    }
+
+    .criteria-table td:first-child {
+      background-color: #f9fbfd;
+      font-weight: bold;
+      color: #173e6e;
+      text-align: left;
+      width: 120px;
+    }
+
+    /* Footer bar */
+    .footer-bar {
+      position:sticky;
+      margin-top: 10mm;
+      left: 0;
+      width: 100%;
+      height: 12px;
+      background-color: #145a8b;
+      border-bottom: 8px solid #f4de87;
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+      .page-container {
+        border: none;
+        box-shadow: none;
+        padding: 10mm;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+    <div class="header-bar"></div>
+    <div>
+      <h3>Competition</h3>
+    </div>
+    <table>
+      
+      <tr class="sub-header">
+        <th>Competition Title</th>
+        <th>Proficiency</th>
+        <th>Competitive Spirit</th>
+      </tr>
+
+      <tbody class="competition-table">
+        <tr><td>00</td><td>00</td><td>00</td></tr>
+        <tr><td>00</td><td>00</td><td>00</td></tr>
+        <tr><td>00</td><td>00</td><td>00</td></tr>
+        <tr><td>00</td><td>00</td><td>00</td></tr>
+        <tr><td>00</td><td>00</td><td>00</td></tr>
+        <tr><td>00</td><td>00</td><td>00</td></tr>
+        <tr><td>00</td><td>00</td><td>00</td></tr>
+      </tbody>
+    </table>
+
+    <br />
+
+    <table class="criteria-table">
+      <tr>
+        <th class="criteria-header">Competition Criteria</th>
+        <th class="grade-A">A</th>
+        <th>B</th>
+        <th>C</th>
+        <th>D</th>
+      </tr>
+
+      <tr>
+        <td>Proficiency</td>
+        <td >Displays the highest level of expertise and perfection</td>
+        <td>Meets expected outcome and displays required skills</td>
+        <td>Participates and accomplishes; needs practice to excel</td>
+        <td>Scope for improvement through practice and guidance</td>
+      </tr>
+
+      <tr>
+        <td>Competitive Spirit</td>
+        <td>Competes with true spirit of learning and joy; participates fairly</td>
+        <td>Involves with enthusiasm; follows guidelines</td>
+        <td>Participates with interest; needs to work on consistent spirit</td>
+        <td>Can perform and learn better with greater sportsman spirit</td>
+      </tr>
+    </table>
+
+    <div class="footer-bar"></div>
+  </div>
+</body>
+</html>

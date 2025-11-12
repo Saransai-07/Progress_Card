@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sri Chaitanya's Report Card</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f7ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+        color: #333;
+    }
+
+    .page-container {
+        width: 100%;
+        max-width: 850px;
+        background-color: #ffffff;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        border-left: 1px solid #ddd;
+    
+        border-bottom: 1px solid #ddd;
+    }
+
+    .header-curve, .footer-curve {
+        background: linear-gradient(to bottom, #d6e8ff, #ffffff);
+        height: 80px;
+        border-bottom: 2px solid #b9d7f7;
+        position: relative;
+    }
+    
+    .footer-curve {
+        background: linear-gradient(to top, #d6e8ff, #ffffff);
+        border-bottom: none;
+        border-top: 2px solid #b9d7f7;
+        height: 60px;
+    }
+
+    .header-title {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 26px;
+        font-weight: bold;
+        color: #1a0dab;
+    }
+
+    .content-area {
+        padding: 10px 30px 30px 30px;
+    }
+
+    .section-title {
+        background-color: #e4eef9;
+        color: #333;
+        font-size: 24px;
+        font-weight: bold;
+        padding: 8px 25px;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 0px;
+        display: inline-block;
+        margin-bottom: 15px;
+        border: 1px solid #c9dff7;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    
+    .attendance-table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid #ccc;
+    }
+
+    .attendance-table th, .attendance-table td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: center;
+        font-size: 13px;
+    }
+    
+    .attendance-table th {
+        background-color: #fff9c4;
+    }
+
+    .attendance-table .row-header {
+        text-align: left;
+        font-weight: bold;
+        background-color: #f2f2f2;
+        width: 15%;
+    }
+
+    .remarks-container {
+        display: flex;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .remarks-box {
+        flex: 1;
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+    
+    .remarks-box .title {
+        text-align: center;
+        font-weight: bold;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .remarks-box .title-2 {
+        color: #d9534f;
+    }
+
+    .remarks-box .field {
+        margin-bottom: 30px;
+    }
+    
+    .remarks-box .field-label {
+        font-size: 14px;
+        margin-bottom: 25px;
+        display: block;
+    }
+
+    .dotted-line {
+        border-bottom: 1.5px dotted #888;
+        height: 1px;
+    }
+    
+    .signatures-section {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        text-align: center;
+        font-size: 14px;
+    }
+    
+    .promotion-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+    }
+    
+    .promotion-left {
+        text-align: center;
+    }
+
+    .congratulations {
+        font-family: 'Dancing Script', cursive;
+        color: #2e8b57;
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .promoted-stamp {
+        width: 120px;
+    }
+
+    .promotion-right {
+        width: 65%;
+        font-size: 15px;
+    }
+
+    .promotion-right p {
+        margin-bottom: 25px;
+    }
+
+    .final-signatures {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-top: 30px;
+    }
+    
+    .school-seal {
+        text-align: center;
+    }
+    
+    .dotted-text {
+        border-bottom: 1.5px dotted #555;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="page-container">
+    <div class="header-curve">
+        <div class="header-title">Sri Chaitanya's</div>
+    </div>
+
+    <div class="content-area">
+        <div class="section-title">Attendance</div>
+        <table class="attendance-table">
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th>April/May</th>
+                    <th>June</th>
+                    <th>July</th>
+                    <th>August</th>
+                    <th>September</th>
+                    <th>October</th>
+                    <th>November</th>
+                    <th>December</th>
+                    <th>January</th>
+                    <th>February</th>
+                    <th>March</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="row-header">No. of Working Days</td>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td class="row-header">No. of Days Attended</td>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div style="margin-top: 30px;">
+             <div class="section-title">Remarks</div>
+        </div>
+
+        <div class="remarks-container">
+            <div class="remarks-box">
+                <div class="title">Performance - Summative - 1</div>
+                <div class="field">
+                    <span class="field-label">Strength(s) of the Student :</span>
+                    <div class="dotted-line"></div>
+                </div>
+                 <div class="field">
+                    <span class="field-label">Best Quality/Skill</span>
+                    <div class="dotted-line"></div>
+                </div>
+                 <div class="field">
+                    <span class="field-label">Challenging Areas:</span>
+                    <div class="dotted-line"></div>
+                </div>
+            </div>
+            <div class="remarks-box">
+                <div class="title title-2">Performance - Summative - 2</div>
+                 <div class="field">
+                    <span class="field-label">Strength(s) of the Student :</span>
+                    <div class="dotted-line"></div>
+                </div>
+                 <div class="field">
+                    <span class="field-label">Best Quality/Skill</span>
+                    <div class="dotted-line"></div>
+                </div>
+                 <div class="field">
+                    <span class="field-label">Challenging Areas:</span>
+                    <div class="dotted-line"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="signatures-section">
+            <div>Signature of the <br><b>Class Teacher</b></div>
+            <div>Signature of the <br><b>Incharge</b></div>
+            <div>Signature of the <br><b>Parent</b></div>
+        </div>
+
+        <div class="promotion-section">
+            <div class="promotion-left">
+                <div class="congratulations">Congratulations!</div>
+                <img src="Promted.webp" alt="Promoted Stamp" class="promoted-stamp">
+            </div>
+            <div class="promotion-right">
+                <p>You have been promoted to class ......................................</p>
+                <p>New session begins on ...................................................</p>
+                <div class="final-signatures">
+                    <div>
+                        Date : ..............................
+                        <div class="school-seal">(School Seal)</div>
+                    </div>
+                    <div>Signature of the <br><b>Principal</b></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-curve"></div>
+</div>
+
+</body>
+</html>

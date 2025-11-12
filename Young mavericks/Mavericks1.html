@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sri Chaitanya's Report Card</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #eaf4ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 800px;
+        background-color: #ffffff;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        border: 1px solid #ddd;
+    }
+
+    .header {
+        background: linear-gradient(to bottom, #d6e8ff, #ffffff);
+        padding: 15px 20px;
+        border-bottom: 2px solid #b9d7f7;
+        text-align: right;
+        font-size: 24px;
+        font-weight: bold;
+        color: #1a0dab;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .section-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .section {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .section-title {
+        background-color: #f0f0f0;
+        padding: 8px 10px;
+        font-weight: bold;
+        color: #333;
+        border-bottom: 1px solid #ccc;
+        background: linear-gradient(to right, #e0eafc, #f0f8ff);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .section-title span {
+        font-style: italic;
+        color: #555;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+        font-size: 14px;
+    }
+
+    th {
+        background-color: #f7f9fc;
+    }
+
+    .semester-header {
+        text-align: center;
+        font-weight: normal;
+    }
+
+    .sem-label {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 12px;
+        font-size: 12px;
+        color: #333;
+    }
+
+    .sem1 {
+        background-color: #fce4e4;
+    }
+
+    .sem2 {
+        background-color: #fff9c4;
+    }
+
+    .grading-scale {
+        margin-top: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .grading-scale .label {
+        font-weight: bold;
+        background-color: #e0eafc;
+        padding: 8px 12px;
+        border-radius: 5px;
+        border: 1px solid #b9d7f7;
+    }
+
+    .grading-scale .item {
+        display: flex;
+        align-items: center;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .grading-scale .grade {
+        background-color: #f0f0f0;
+        padding: 8px 12px;
+        font-weight: bold;
+    }
+    .grade-a { background-color: #d4edda; }
+    .grade-b { background-color: #cce5ff; }
+    .grade-c { background-color: #fff3cd; }
+    .grade-d { background-color: #f8d7da; }
+    .grade-e { background-color: #e2e3e5; }
+
+    .grading-scale .desc {
+        padding: 8px 12px;
+        background-color: #fff;
+    }
+
+    .competitions-section {
+        margin-top: 20px;
+    }
+
+    .competitions-table th, .competitions-table td {
+        height: 35px; /* Fixed height for rows */
+    }
+
+    .criteria-table {
+        margin-top: 20px;
+    }
+    .criteria-table th, .criteria-table td {
+        vertical-align: top;
+    }
+
+    .criteria-header {
+        background-color: #fff9c4 !important;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .criteria-title {
+        background-color: #f0f8ff;
+        font-weight: bold;
+    }
+
+    .note {
+        margin-top: 15px;
+        font-size: 13px;
+        color: #555;
+    }
+
+    .note b {
+        color: #333;
+    }
+    
+    .footer {
+        background: linear-gradient(to top, #d6e8ff, #ffffff);
+        height: 40px;
+        border-top: 2px solid #b9d7f7;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+        .section-grid {
+            grid-template-columns: 1fr;
+        }
+        .grading-scale {
+            flex-direction: column;
+            align-items: stretch;
+        }
+    }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        Sri Chaitanya's
+    </div>
+
+    <div class="main-content">
+        <div class="section-grid">
+            <!-- General Encyclopedia -->
+            <div class="section">
+                <div class="section-title"><span>///</span> General Encyclopedia</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th class="semester-header"><span class="sem-label sem1">Sem I</span></th>
+                            <th class="semester-header"><span class="sem-label sem2">Sem II</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Recognition of bits</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Identification of bits</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Knowing facts</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Applying facts</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ICT -->
+            <div class="section">
+                <div class="section-title"><span>///</span> ICT</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th class="semester-header"><span class="sem-label sem1">Sem I</span></th>
+                            <th class="semester-header"><span class="sem-label sem2">Sem II</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Operating skills</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Processing of information</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Application skills <small>(Theory into practice)</small></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Usage of World Wide Web (Internet)</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Abacus -->
+            <div class="section">
+                <div class="section-title"><span>///</span> Abacus</div>
+                 <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th class="semester-header"><span class="sem-label sem1">Sem I</span></th>
+                            <th class="semester-header"><span class="sem-label sem2">Sem II</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Concentration</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Speed & accuracy</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Visualization</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Memory</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- STEAM/Robotics -->
+            <div class="section">
+                <div class="section-title"><span>///</span> STEAM/Robotics</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th class="semester-header"><span class="sem-label sem1">Sem I</span></th>
+                            <th class="semester-header"><span class="sem-label sem2">Sem II</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Problem-solving</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Collaboration</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Critical thinking</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Creativity</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="competitions-section">
+            <table class="grading-scale-table" style="margin-top: 20px;">
+                <thead>
+                    <tr>
+                        <th class="grade  grade-a">A</th>
+                        <th class="grade  grade-b">B</th>
+                        <th class="grade  grade-c">C</th>
+                        <th class="grade  grade-d">D</th>
+                        <th class="grade  grade-e">E</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="desc">Outstanding</td>
+                        <td class="desc">Excellent</td>
+                        <td class="desc">Good</td>
+                        <td class="desc">Satisfactory</td>
+                        <td class="desc">Needs Improvement</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="section-title"><span>///</span> Competitions</div>
+            <table class="competitions-table" style="margin-top: 15px;">
+                <thead>
+                    <tr style="background-color: #fff9c4;">
+                        <th style="text-align:center;">Competition Title</th>
+                        <th style="text-align:center;">Proficiency</th>
+                        <th style="text-align:center;">Competitive Spirit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td></tr>
+                </tbody>
+            </table>
+
+            <table class="criteria-table">
+                <thead>
+                    <tr>
+                        <th class="criteria-header">Competition Criteria</th>
+                        <th class="criteria-header">A</th>
+                        <th class="criteria-header">B</th>
+                        <th class="criteria-header">C</th>
+                        <th class="criteria-header">D</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="criteria-title">Proficiency</td>
+                        <td>Displays the highest level of expertise and perfection</td>
+                        <td>Meets expected outcome and displays required skills</td>
+                        <td>Participates and accomplishes; needs practice to excel</td>
+                        <td>Scope for improvement through practice and guidance</td>
+                    </tr>
+                    <tr>
+                        <td class="criteria-title">Competitive spirit</td>
+                        <td>Competes with true spirit of learning and joy; participates fairly</td>
+                        <td>Involves with enthusiasm; follows guidelines</td>
+                        <td>Participates with interest; needs to work on consistent spirit</td>
+                        <td>Can perform and learn better with greater sportsman spirit</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="note"><b>Note:</b> Students who achieve "A" grading in proficiency parameter will receive a Proficiency Certificate and a participation certificate will be given for the students with good competitive spirit.</p>
+        </div>
+    </div>
+    <div class="footer"></div>
+</div>
+
+</body>
+</html>

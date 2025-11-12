@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competitions Grading Sheet</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arial&display=swap');
+
+        body {
+            font-family: Arial, sans-serif;
+            /* background-color: #e0e0e0; */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .pdf-page {
+            width: 800px;
+            background-color: #ffffff;
+            border-top: 20px solid #005a9c;
+            border-bottom: 20px solid #f9a825;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            /* border: 2px solid #005a9c; */
+            background-color: #ffffff;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .competitions-title {
+            background-color: #fce599;
+            color: #333;
+            padding: 10px 20px;
+            font-weight: bold;
+            font-size: 1.2em;
+            border: 1px solid #ccc;
+            border-radius: 8px  ;
+            width: 200px;
+            text-align: center;
+            margin-left: 10px;
+        }
+        
+        .grading-scale {
+            display: flex;
+            align-items: center;
+            border: 1px solid #666;
+            border-radius: 5px;
+            padding: 2px;
+        }
+
+        .grading-scale span:first-child {
+            padding: 5px 10px;
+            font-weight: bold;
+        }
+        
+        .grade {
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            margin: 0 2px;
+        }
+
+        .grade.a { background-color: #4caf50; }
+        .grade.b { background-color: #2196f3; }
+        .grade.c { background-color: #ff9800; }
+        .grade.d { background-color: #f44336; }
+
+        .main-table {
+            width: calc(100% - 40px);
+            margin: 0 20px;
+            border-collapse :inherit;
+            border: 1px solid #005a9c;
+        }
+
+        .main-table th {
+            background-color: #005a9c;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+            border: 1px solid #005a9c;
+        }
+
+        .main-table td {
+            height: 50px;
+            border: 1px solid #005a9c;
+        }
+
+        .main-table th:nth-child(1) { width: 50%; }
+        .main-table th:nth-child(2) { width: 25%; }
+        .main-table th:nth-child(3) { width: 25%; }
+
+        .main-table td {
+            background-color: #fff;
+            text-align: center;
+        }
+        
+        .criteria-section {
+            padding: 20px;
+        }
+
+        .criteria-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .criteria-table th,
+        .criteria-table td {
+            border: 1px solid #999;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .criteria-table th {
+            background-color: #005a9c;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .criteria-table td:first-child {
+            background-color: #e6f0f7;
+            font-weight: bold;
+            width: 15%;
+        }
+
+        .criteria-table th:not(:first-child) {
+            background-color: #fce599;
+            color: #333;
+            width: 21.25%;
+        }
+        
+        .criteria-table td {
+            background-color: #ffffff;
+        }
+
+        /* footer {
+            height: 15px;
+            background-color: #fce599;
+        } */
+
+    </style>
+</head>
+<body>
+    <div class="pdf-page">
+        <div class="container">
+            <header>
+                <div class="competitions-title">Competitions</div>
+                <div class="grading-scale">
+                    <span>Grading Scale</span>
+                    <div class="grade a">A</div>
+                    <div class="grade b">B</div>
+                    <div class="grade c">C</div>
+                    <div class="grade d">D</div>
+                </div>
+            </header>
+            
+            <table class="main-table">
+                <thead>
+                    <tr>
+                        <th>Competition Title</th>
+                        <th>Proficiency</th>
+                        <th>Competitive Spirit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>00</td><td>00</td><td>00</td></tr>
+                    <tr><td>00</td><td>00</td><td>00</td></tr>
+                    <tr><td>00</td><td>00</td><td>00</td></tr>
+                    <tr><td>00</td><td>00</td><td>00</td></tr>
+                    <tr><td>00</td><td>00</td><td>00</td></tr>
+                    <tr><td>00</td><td>00</td><td>00</td></tr>
+                    <tr><td>00</td><td>00</td><td>00</td></tr>
+                    <tr><td>00</td><td>00</td><td>00</td></tr>
+                    <tr><td>00</td><td>00</td><td>00</td></tr>
+                </tbody>
+            </table>
+            
+            <div class="criteria-section">
+                <table class="criteria-table">
+                    <thead>
+                        <tr>
+                            <th>Competition Criteria</th>
+                            <th>A</th>
+                            <th>B</th>
+                            <th>C</th>
+                            <th>D</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Proficiency</td>
+                            <td>Displays the highest level of expertise and perfection</td>
+                            <td>Meets expected outcome and displays required skills</td>
+                            <td>Participates and accomplishes; need practice to excel</td>
+                            <td>Scope for improvement through practice and guidance</td>
+                        </tr>
+                        <tr>
+                            <td>Competitive Spirit</td>
+                            <td>Completes with true spirit of learning and joy; participates fairly</td>
+                            <td>Involves with enthusiasm; follows guidelines</td>
+                            <td>Participates with interest; needs to work on consistent spirit</td>
+                            <td>Can perform and learn better with greater sportsman spirit</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
