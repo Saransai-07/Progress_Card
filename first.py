@@ -305,15 +305,145 @@
 #   student["grade"] = "poor"
 # print(student)   
 
-list1 = [1, 2, 3, 4, 5, 6]
-list2 = [4, 5, 6, 7, 8, 9]
+# list1 = [1, 2, 3, 4, 5, 6]
+# list2 = [4, 5, 6, 7, 8, 9]
+# set1 = set(list1)
+# set2 = set(list2)
+# print(set1 | set2)
+# print(set1 & set2)
+# print(set1 - set2)
+# # print(set1   | set2 & set1 )
+# # print(set1 | set2 - set1 | set2)
+# print(set1 ^ set2)
 
-set1 = set(list1)
-set2 = set(list2)
+# products = [
+#   ("Laptop", 55000),
+#   ("Mouse", 500),
+#   ("Keyboard", 1500),
+#   ("Monitor", 12000),
+#   ("CPU", 30000)
+# ]
 
-print(set1 | set2)
-print(set1 & set2)
-print(set1 - set2)
-# print(set1   | set2 & set1 )
-# print(set1 | set2 - set1 | set2)
-print(set1 ^ set2)
+# new_product = {}
+# for key, value in products:
+#   new_product[key] = value
+# print(new_product)
+
+# highest_product = None
+# highest_price = -1 
+
+# for name , price in products :
+#   if price > highest_price:
+#     highest_price = price 
+#     highest_product = name 
+# print(highest_product, highest_price)
+
+# total = 0 
+# for name , price in products:
+#   total += price  
+# avg_price = total / len(products)
+# print(avg_price)
+
+# category = {
+#   "expensive" : [],
+#   "medium" : [],
+#   "cheap" : [],
+# }
+
+# for name, price in products:
+#   if price >= 20000:
+#     category["expensive"].append(name)
+#   elif 5000 <= price < 20000 :
+#     category["medium"].append(name)
+#   else : 
+#     category["cheap"].append(name)
+    
+# print(category)
+
+# students = [
+#   {"name": "Saran", "skills": ["Python", "HTML", "CSS"]},
+#   {"name": "Kumar", "skills": ["Python", "Java", "SQL"]},
+#   {"name": "Ravi", "skills": ["HTML", "CSS", "JavaScript"]},
+#   {"name": "Mohan", "skills": ["Python", "JavaScript", "SQL"]}
+# ]
+
+# def my_decorator(func):
+#     def wrapper(*args, **kwargs):
+#         print("Something before the function call")
+#         result = func(*args, **kwargs)
+#         print("Something after the function call")
+#         return result
+#     return wrapper
+
+# def say_hello(name):
+#     print(f"Hello, {name}!")
+
+# say_hello = my_decorator(say_hello) # Manual application
+# say_hello("Alice")
+
+
+
+
+# def smart_divide(func):
+#   def wrapper(a, b):
+#     if b == 0:
+#       print("whoops! Cannot divide by zero")
+#       return
+#     return func(a, b)
+#   return wrapper
+
+# @smart_divide
+# def divide(a,b):
+#   return a/b
+
+# print(divide(10,2))
+# print(divide(10,0))
+
+
+# def repeat(num_times):
+#   def decorator_repeat(func):
+#     def wrapper(*args,**kwargs):
+#       for i in range(num_times):
+#         result = func(*args,**kwargs)
+#       return result
+#     return wrapper
+#   return decorator_repeat
+
+# @repeat(num_times=3)
+# def greet(name):
+#   print(f"Hello {name}")
+
+# greet("Saran")
+
+
+# def logger(func):
+#   def wrapper(*args, **kwargs):
+#     print(f"Calling { func.__name__} with args : {args}, kwargs: {kwargs}")
+#     result = func(*args, **kwargs)
+#     print(f"{func.__name__} returned: {result}")
+#     return result
+#   return wrapper
+
+# @logger
+# def add(a, b):
+#   return a+b
+
+# add(5, 3)
+
+# Calling add with args : (5, 3), kwargs: {}
+# add returned: 8
+def requires_auth(func):
+    def wrapper(*args, **kwargs):
+        # Check if user is authenticated
+        is_authenticated = check_authentication()
+        if not is_authenticated:
+            raise PermissionError("Authentication required")
+        return func(*args, **kwargs)
+    return wrapper
+
+@requires_auth
+def sensitive_operation():
+    return "Sensitive data"
+
+def check_authenticatiodn():
+    return True  # Simulated authentication check
