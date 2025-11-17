@@ -593,18 +593,77 @@
 # print([cell.cell_contents for cell in closure_func.__closure__])
 
 
-def logger(func):
-    def wrapper(*args, **kwargs):
-        print(f'{func.__name__} with args : {args} and kwargs {kwargs}')
-        print(f' calling before the function')
-        result = func(*args, **kwargs)
-        print(result)
-        print(f' after the function')
-        print(f' {func.__name__}  retuned : {result}')
-        return result
-    return wrapper
-@logger
-def add(a,b):
-    return a + b
+# def logger(func):
+#     def wrapper(*args, **kwargs):
+#         print(f'{func.__name__} with args : {args} and kwargs {kwargs}')
+#         print(f' calling before the function')
+#         result = func(*args, **kwargs)
+#         print(result)
+#         print(f' after the function')
+#         print(f' {func.__name__}  retuned : {result}')
+#         return result
+#     return wrapper
+# @logger
+# def add(a,b):
+#     return a + b
+# print(add(2, 4))
 
-print(add(2, 4))
+# def create_person(name, age):
+#     data = {'name': name , 'age' : age}
+    
+#     # def get(attribute, value):
+#     #     return f'{attribute} and value  {value}'
+    
+#     def get(attribute):
+#         return data.get(attribute, "Attribute not found")
+    
+#     def set(attribute,value):
+#         data[attribute] = value
+#         return f"{attribute} set to {value}"
+    
+#     def info():
+#         return f" {data['name']} is {data['age']} years old"
+    
+#     return {'get': get , 'set' : set, 'info': info}
+
+# person = create_person('Alice' , 22)
+# # print(person['info']())
+# # print(person['set']('age',23))
+# print(person['get']('name'))
+# # print(person['info']())
+
+#  Recursion
+
+# def countDown(n):
+#     if n <= 0:
+#         print("Done")
+#     else: 
+#         print(n)
+#         countDown(n-1)
+
+# countDown(5)
+
+# def fibonacci(n):
+#     if n <= 1:
+#         return n
+#     else : 
+#         return fibonacci(n-1) + fibonacci(n-2)
+
+# print(fibonacci(7))
+
+# my_list = [1, 2, 3, 4, 5]
+# count = 0
+# for i in my_list:
+#     count += i
+# print(count)
+
+# def sum_list(number):
+#     if len(number) == 0:
+#         return 0
+#     else :
+#         return number[0] + sum_list(number[1:])
+# my_list = [1,4,5,7,4,3]
+# print(sum_list(my_list))
+
+# my_list = [3, 7, 2, 9, 1]
+# print(max(my_list))
