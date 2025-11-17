@@ -431,19 +431,180 @@
 # add(5, 3)
 
 # Calling add with args : (5, 3), kwargs: {}
-# add returned: 8
-def requires_auth(func):
+# # add returned: 8
+# def requires_auth(func):
+#     def wrapper(*args, **kwargs):
+#         # Check if user is authenticated
+#         is_authenticated = check_authentication()
+#         if not is_authenticated:
+#             raise PermissionError("Authentication required")
+#         return func(*args, **kwargs)
+#     return wrapper
+# @requires_auth
+# def sensitive_operation():
+#     return "Sensitive data"
+# def check_authenticatiodn():
+#     return True  # Simulated authentication check
+
+# my_list = [1,3,4,5]
+# my_tuple = (1,3,4)
+# my_string = "Hello"
+
+# list_iterator = iter(my_list)
+# tuple_iterator = iter(my_tuple)
+# string_iterator = iter(my_string)
+
+# print(iter(my_list))
+# print(next(list_iterator))
+# print(next(tuple_iterator))
+# print(next(tuple_iterator))
+# print(next(string_iterator))
+# print(next(string_iterator))
+# print(next(string_iterator))
+
+
+# class CoutnDown:
+#     def __init__(self, start):
+#         self.current = start
+    
+#     def __iter__(self):
+#         return self
+    
+#     def __next__(self):
+#         if self.current <= 0:
+#             raise StopIteration
+#         else :
+#             self.current -= 1
+#             return self.current + 1 
+
+# counter = CoutnDown(5)
+# for number in counter:
+#     print(number)
+
+
+# numbers = [1,2 ,3]
+# for i in numbers:
+#     print(i)
+# iterator = iter(numbers)
+
+# while True:
+#     try :
+#         item = next(iterator)
+#         print(item)
+#     except StopIteration:
+#         break
+# fruits = ['apple', 'banana', 'cherry']
+
+# for index, fruit in enumerate(fruits):
+#     print(f" {index} : {fruit} ")
+
+# names = ['Alice', 'Bob', 'Charlie']
+# ages = [25, 30, 35]
+
+# for name, age in zip(names, ages):
+#     print(f" {name} is  {age} years old "
+
+# numbers = [1,2,3,4,5]
+# squared = map(lambda x: x+22, numbers)
+# print(list(squared))
+
+# def countdown(n):
+#     while n > 0:
+#         yield n
+#         n -= 1
+        
+# for number in countdown(5):
+#     print(number)  # 5, 4, 3, 2, 1
+
+# squares = ( x**2 for x in range(5))
+
+# print(next(squares))
+# print(next(squares))
+# print(next(squares))
+# print(list(squares))
+
+# def myFunc(n):
+#     return lambda x : x * n 
+
+# mytripler  = myFunc(3)
+# print(mytripler(11))
+
+# def create_opreation(operation):
+#     if operation == "add":
+#         return lambda x, y : x+y
+#     elif operation == "sub":
+#         return lambda x, y : x-y
+#     elif operation == "mul":
+#         return lambda x, y : x*y
+#     elif operation == "div":
+#         return lambda x,y : x//y
+    
+# adder = create_opreation("add")
+# subtraction = create_opreation('sub')
+# multiplication =create_opreation('mul')
+# division = create_opreation('div')
+
+# print(adder(4,2))
+# print(subtraction(4,2))
+# print(multiplication(4,2))
+# print(division(4,2))
+
+# def counter():
+#     count = 0
+#     def increment():
+#         global count 
+#         count += 1
+#         return count
+    
+#     return increment
+
+# counter1 = counter()
+# counter2 = counter()
+
+# print(counter1())
+# print(counter1())
+# print(counter1())
+
+# print(counter2())
+# print(counter2())
+
+# def multiplier_factory(factor):
+#     def multiplier(x):
+#         return x * factor
+#     return multiplier
+# double = multiplier_factory(2)
+# triple = multiplier_factory(3)
+# quadruple = multiplier_factory(4)
+
+# print(double(5))     # 10
+# print(triple(5))     # 15
+# print(quadruple(5))  # 20
+
+# def outer(x):
+#     def inner(y):
+#         return x + y
+#     return inner
+
+# closure_func = outer(10)
+# print(closure_func(5))
+
+# print(closure_func.__closure__ is not None)
+
+# print([cell.cell_contents for cell in closure_func.__closure__])
+
+
+def logger(func):
     def wrapper(*args, **kwargs):
-        # Check if user is authenticated
-        is_authenticated = check_authentication()
-        if not is_authenticated:
-            raise PermissionError("Authentication required")
-        return func(*args, **kwargs)
+        print(f'{func.__name__} with args : {args} and kwargs {kwargs}')
+        print(f' calling before the function')
+        result = func(*args, **kwargs)
+        print(result)
+        print(f' after the function')
+        print(f' {func.__name__}  retuned : {result}')
+        return result
     return wrapper
+@logger
+def add(a,b):
+    return a + b
 
-@requires_auth
-def sensitive_operation():
-    return "Sensitive data"
-
-def check_authenticatiodn():
-    return True  # Simulated authentication check
+print(add(2, 4))
