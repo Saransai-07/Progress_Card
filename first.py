@@ -432,18 +432,20 @@
 
 # Calling add with args : (5, 3), kwargs: {}
 # add returned: 8
-def requires_auth(func):
-    def wrapper(*args, **kwargs):
-        # Check if user is authenticated
-        is_authenticated = check_authentication()
-        if not is_authenticated:
-            raise PermissionError("Authentication required")
-        return func(*args, **kwargs)
-    return wrapper
 
-@requires_auth
-def sensitive_operation():
-    return "Sensitive data"
+# def requires_auth(func):
+#     def wrapper(*args, **kwargs):
+#         # Check if user is authenticated
+#         is_authenticated = check_authentication()
+#         if not is_authenticated:
+#             raise PermissionError("Authentication required")
+#         return func(*args, **kwargs)
+#     return wrapper
 
-def check_authenticatiodn():
-    return True  # Simulated authentication check
+# @requires_auth
+# def sensitive_operation():
+#     return "Sensitive data"
+
+# def check_authenticatiodn():
+#     return True  # Simulated authentication check
+
