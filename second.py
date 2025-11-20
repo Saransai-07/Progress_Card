@@ -403,19 +403,80 @@ import re
 #     self.year = year
     
 #   def show_info(self):
-#     print(f'Brand :{self.brand} , model :{self.model}, year: {self.year}')
+#     print(f"Brand: {self.brand}")
+#     print(f"Model: {self.model}")
+#     print(f"Year: {self.year}")
   
 # class Car(Vehicle):
-#   def __init__(self, fuel):
+#   def __init__(self, brand, model, year,fuel):
+#     super().__init__(brand, model, year)
 #     self.fuel = fuel
   
 #   def fuel_type(self):
-#     self.fuel
-  
+#     print(f"Fuel Type: {self.fuel}")
+      
 #   def car_Details(self):
-#     print(f'Brand :{self.brand} , model :{self.model}, year: {self.year} and fuel type : {self.fuel}' )
-    
-    
-# c1 = Car("Audi", "City", 2024)
+#     self.show_info()
+#     self.fuel_type()
 
-# c1.car_Details()
+# class ElectricCar(Car):
+#   def __init__(self, brand, model, year, fuel, battrey_capacity, range_km):
+#     super().__init__(brand, model, year, fuel)
+#     self.battery_capacity = battrey_capacity
+#     self.range_km = range_km
+
+#   def show_full_details(self):
+#     self.car_Details()
+#     print(f"Battery: {self.battery_capacity} kWh")
+#     print(f"Range: {self.range_km} km")
+
+# # c1 = Car("Audi", "City", 2024, 'petrol')
+# # c1.car_Details()
+
+# # c1 = ElectricCar("Audi", "City", 2024, 'petrol', "50w" , "100kmph")
+# # c1.show_full_details()\
+
+# ec1 = ElectricCar("Tesla", "Model 3", 2023, "Electric", 75, 450)
+# ec1.show_full_details()
+
+# class Animal:
+#     def __init__(self):
+#         pass
+#     def make_sound():
+#         print(f"Some generic animal sound")
+    
+# class Dog(Animal):
+#     def __init__(self):
+#         super().__init__()
+#         print("Bark")
+# class Cat(Animal):
+#     def __init__(self):
+#         super().__init__()
+#         print("Meow")
+
+# a1 = Animal()
+# c1 = Cat()
+# d1 = Dog()
+
+# class Animal:
+#     def make_sound(self):
+#         print("some generic sound")
+
+# class Dog(Animal):
+#     def make_sound(self):
+#         print("bark")
+
+# class Cat(Animal):
+#     def make_sound(self):
+#         print("meow")
+# def animal_sound(animal):
+#     animal.make_sound()
+
+# a1 = Animal()
+# d1 = Dog()
+# c1 = Cat()
+
+# animal_sound(a1)
+# animal_sound(d1)
+# animal_sound(c1)
+
